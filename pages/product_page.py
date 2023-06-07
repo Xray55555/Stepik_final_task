@@ -27,3 +27,11 @@ class ProductPage(BasePage):
         product_price = self.element_text(*ProductPageLocators.prod_price)
         in_basket_price = self.element_text(*ProductPageLocators.in_bask_price)
         assert in_basket_price == product_price, "Product price in product page and basket are not the same"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.add_title), \
+           "Success message is presented, but should not be"
+
+    def should_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.add_title), \
+           "Element not disappeared"
