@@ -15,3 +15,7 @@ class ProductPageLocators():
     price_title = (By.CSS_SELECTOR, "div.alertinner > p:nth-child(1)")
     prod_price = (By.CSS_SELECTOR, "p.price_color")
     in_bask_price = (By.CSS_SELECTOR, "div.alertinner p strong")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")    
