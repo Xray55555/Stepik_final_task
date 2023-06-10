@@ -9,6 +9,7 @@ class ProductPage(BasePage):
         assert basket_button.is_enabled(), "Basket button is not clickable"
         basket_button.click()
 
+    # Метод оставлен в целях прохождения тестов с промо-кодом
     def get_code(self):
         assert self.solve_quiz_and_get_code(), "You couldn't get promo-code"
 
